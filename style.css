@@ -1,0 +1,134 @@
+/* Variables */
+:root {
+  --color-primary: #eb2f64;
+  --color-primary-light: #ff3366;
+  --color-primary-dark: #ba265d;
+
+  --color-grey-light: #f4f2f2;
+  --color-grey-dark: #999;
+
+  --color-white: #fff;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  /* below 1rem = 10px */
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+}
+
+.header {
+  width: 40%;
+  margin: 50px auto 0px;
+  color: var(--color-white);
+  background-color: var(--color-primary-dark);
+  text-align: center;
+  border: 1px solid var(--color-primary);
+  border-bottom: none;
+  border-radius: 1rem 1rem 0px 0px;
+  padding: 2rem;
+}
+
+form,
+.content {
+  /* The content class will be created later */
+  width: 40%;
+  margin: 0px auto;
+  padding: 2rem;
+  border: 1px solid var(--color-primary);
+  border-radius: 0 0 1rem 1rem;
+  background-color: #eeeeee;
+}
+
+.input-group {
+  margin: 1rem 0 1rem 0;
+}
+
+.input-group label {
+  display: block;
+  text-align: left;
+  margin-left: 0.3rem;
+}
+
+.input-group input {
+  height: 3rem;
+  width: 93%;
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  border-radius: 0.5px;
+  border: 1px solid var(--color-grey-dark);
+}
+
+.input-group > input:focus {
+  outline: 1px solid var(--color-primary);
+}
+
+.btn {
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.btn:hover,
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.25);
+  transform: scale(1.05) translateY(-0.3rem);
+  cursor: pointer;
+
+  transition: all 0.5s;
+}
+
+.error {
+  width: 92%;
+  margin: 0 auto;
+  padding: 1rem;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  background-color: var(--color-grey-light);
+  border-radius: 5px;
+  text-align: left;
+}
+
+.success {
+  color: #3c763d;
+  background-color: var(--color-grey-light);
+
+  border: 1px solid #3c763d;
+  margin-bottom: 2rem;
+}
+
+/* MEDIA QUERIES */
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 767px) {
+  html {
+    box-sizing: border-box;
+    /* below 1rem = 8px */
+    font-size: 50%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  html {
+    box-sizing: border-box;
+    /* below 1rem = 6px */
+    font-size: 37.5%;
+  }
+}
